@@ -1,0 +1,206 @@
+.welcome{
+    height: 39rem;
+
+    background-image: url(./images/hero-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    
+
+    
+
+}
+.decoration{
+    text-decoration: none; 
+    list-style: none;
+    text-decoration: none;  
+    color: white;
+}
+.decoration:active{
+    color: orange;
+    background-color: black;
+}
+.header{
+    /* display: flex;
+    justify-content: end;
+    align-items: center; */
+    color: white;
+
+    
+
+
+}
+.dec{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+li{
+     margin: 30px;
+    
+
+}
+.welcome-header{
+    font-size: 47px;
+    
+}
+.div-header{
+    /* display: flex;
+    justify-content: start;
+    align-items: center; */
+    margin-top: 80px;
+    height: 25rem;
+    padding: 45px;
+    font-size: 18px;
+    
+
+}
+.button-style{
+    background-color: brown;
+    color: white;
+    height: 2.5rem;
+    width: 160px;
+    border-radius: 10px;
+}
+.about-us{
+  
+    height: 30rem;
+    display: flex;
+    /* display: grid;
+    grid-template-columns:1fr 1fr; */
+}
+.about-image{
+    width: 100%;
+    background-image: url(./images/about-img.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% 80%;
+}
+.about{
+    font-size: 18px;
+}
+.services{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 70rem;
+
+    margin: 30px;
+}
+.service-button{
+   color: brown;
+   border: solid 1px brown;
+   height: 2.2rem;
+   width: 150px;
+
+}
+.service-background{
+    background-image: url(./images/body_bg.jpg);
+}
+.quote{
+
+
+    font-size: 18px;
+}
+.form{
+
+    height: 40rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+    
+}
+.form-input{
+    width: 700px;
+    height: 2.2rem;
+}
+.form-message{
+    width: 700px;
+    height: 7rem; 
+}
+.form-heading{
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    
+}
+.form-picture-contact{
+    margin-top: 60px;
+    width: 100%;
+    background-image: url(./images/contact-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% 80%;
+}
+.form-picture{
+    margin-top: 60px;
+    width: 100%;
+    background-image: url(./images/contact-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% 80%;
+}
+.form-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.books{
+    color: black;
+    background-image: url(./images/body_bg.jpg);
+    margin: 40px;
+    
+}
+.add_books{
+    background-color: black; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 250px;
+    padding-top: 40px;
+}
+.display_books{
+    background-image: url(./images/body_bg.jpg);
+    color: black;
+    height: auto;
+
+
+}
+.books_margin{
+    padding-bottom: 20px;
+}
+/* @media screen {
+    
+} */
+@media screen and (max-width:700px){
+ .form-picture{
+    display: none;
+ }
+ .welcome{
+    margin-left: 5px;
+    height: 50rem;
+ }
+ .about-us{
+    height: 45rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+ }
+ .services{
+    display: flex;
+    flex-direction: column;
+    height: 138rem;
+ }
+ .form-input{
+    width: 400px;
+ }
+ .form-message{
+    width: 400px;
+ }
+}
+@media screen and (max-width:950px){
+    .form-picture-contact{
+        display: none;
+    }
+}

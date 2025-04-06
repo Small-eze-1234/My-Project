@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>ADEX Company Limited</title>
+</head>
+<body style="background-color: rgb(190, 190, 190);">
+    <section class="welcome">
+        <header class="header" style="position: relative;">
+            <h1 style="position: absolute;left: 0px;margin-top: 0px;"><img src="./images/logo.png" alt="">ADEX Company Limited</h1>
+        </header>
+        <div class="div-header" style="margin-top: 50px;padding-top: 150px;">
+        <h1 class="welcome-header">WELCOME TO <br>
+        <span style="color: rgb(201, 32, 32);">CONTENT WRITING SERVICES</span></h1>
+        <p class="paragraph">Before Would Continue With Anything You Would Need To Register With Our Company</p>
+        <button class="button-style" ><a href="./login.html" style="text-decoration: none;color: black;">LOG IN</a></button>
+        </div>
+    
+    </section>
+    <section class="form-grid">
+
+        <div class="form">
+            <h1 class="form-heading" style="text-decoration: underline;">REGISTER NOW <p class="form-line"></p></h1>
+            <br>
+            <br>
+            <input type="text" placeholder="FULL NAME" class="form-input" style="width: 400px;" id="name">
+            <br>
+            <input type="email" placeholder="EMAIL" class="form-input" style="width: 400px;" id="email">
+            <br>
+            <input type="number" placeholder="PHONE NUMBER" class="form-input" style="width: 400px;" id="number">
+            <br>
+            <input type="password" placeholder="PASSWORD" class="form-input" style="width: 400px;" id="password">
+            <br> <br>
+            <button class="button-style" ><a href="./home.html" style="text-decoration: none;color: black;" id="button">SIGN IN</a></button>
+        
+        </div>
+        <div class="form-picture">
+            
+        </div>
+        </section>
+
+
+
+
+
+
+        <script>
+           const nameEL=document.querySelector("#name")
+           const emailEL=document.querySelector("#email")
+           const phonenumberEL=document.querySelector("#number")
+           const passwordEL=document.querySelector("#password")
+           const buttonEL=document.querySelector("#button")
+
+try {
+    
+
+           buttonEL.addEventListener("click",async()=>{
+            //    e.preventDefault()
+               const reqBody={
+                   name:nameEL.value,
+                   email:emailEL.value,
+                   phonenumber:Number(phonenumberEL.value),
+                   password:passwordEL.value,
+                   
+               }
+               
+               console.log(reqBody)
+               
+               
+               const response= await fetch("http://localhost:3000/api/user",{
+                 method:"POST",
+                 headers:{
+                    "Content-Type":"application/json"
+                 },
+                 body:JSON.stringify(reqBody)
+
+               }
+                
+
+
+
+               )
+               if(reqBody =!response)[
+                 console.log("false")
+               ]
+           })
+        }
+           catch (error) {
+           
+            
+}
+        //    const data=await response.JSON();
+        //    if(data =Error){
+        //          console.log("error")
+        //    }
+        </script>
+</body>
+</html>

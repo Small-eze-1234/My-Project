@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="welcome">
+        <header class="header" style="position: relative;">
+            <h1 style="position: absolute;left: 0px;margin-top: 0px;"><img src="./images/logo.png" alt="">ADEX Company Limited</h1>
+        </header>
+        <div class="div-header" style="margin-top: 50px;padding-top: 150px;">
+        <h1 class="welcome-header">WELCOME TO <br>
+        <span style="color: rgb(201, 32, 32);">A PAGE WHERE YOU CAN ADD BOOKS</span></h1>
+        <p class="paragraph">Write Books Till You Are Tired</p>
+<a href="./books.html" style="text-decoration: none;color: black;"><button class="button-style" >BOOKS</button></a>
+        </div>
+    
+    </section>
+
+
+    <div class="add_books" >
+    <form action="" class="form" >
+        <div id="error"></div>
+        <input type="text" placeholder="WRITER'S NAME" id="author" style="width: 400px;height: 3rem;" required>
+        <br><br>
+        <input type="text" placeholder="TITTLE" id="tittle" style="width: 400px;height: 3rem;"required>
+        <br><br>
+        <textarea type="text" placeholder="STORY" id="story" style="width: 400px;height: 15rem;"required></textarea>
+
+        <br> <br>
+        <button class="button-style" id="button">ADD</button>
+
+
+
+    </form>
+</section>
+
+
+    <script>
+
+        const authorEL=document.querySelector("#author")
+        const tittleEL=document.querySelector("#tittle")
+        const storyEL=document.querySelector("#story")
+        const buttonEL=document.querySelector("#button")
+
+
+try {
+ 
+
+        buttonEL.addEventListener("click",async()=>{
+         //    e.preventDefault()
+            const reqBody={
+
+                author:authorEL.value,
+                tittle:tittleEL.value,
+                story:storyEL.value
+                
+            }
+            
+            console.log(reqBody)
+            
+            
+            const response= await fetch("http://localhost:3000/api/books",{
+              method:"POST",
+              headers:{
+                 "Content-Type":"application/json"
+              },
+              body:JSON.stringify(reqBody)
+
+            }
+             
+
+
+
+            )
+            
+        })
+     }
+        catch (error) {
+
+        
+}
+     //    const data=await response.JSON();
+     //    if(data =Error){
+     //          console.log("error")
+     //    }
+     </script>
+</body>
+</html>

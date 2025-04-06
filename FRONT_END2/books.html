@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="welcome">
+        <header class="header" style="position: relative;">
+            <h1 style="position: absolute;left: 0px;margin-top: 0px;"><img src="./images/logo.png" alt="">ADEX Company Limited</h1>
+              <nav class="dec">
+           <a href="./home.html">  <li class="decoration">HOME</li></a>
+           <a href="./about.html"><li class="decoration">ABOUT</li></a>
+           <a href="./services.html"><li class="decoration">SERVICES</li></a>
+           <a href="./books.html"><li class="decoration">BOOKS</li></a>
+           <a href="./contact.html"><li class="decoration">CONTACT US</li></a>
+              </nav>
+        </header>
+        <div class="div-header">
+        <h1 class="welcome-header">WELCOME TO <br>
+        <span style="color: rgb(201, 32, 32);">BOOKS</span></h1>
+        <p class="paragraph">A PLACE WHERE YOU CAN READ AND ADD BOOKS</p>
+<a href="./addbooks.html" style="text-decoration: none;color: black;"><button class="button-style" >ADD BOOKS</button></a>
+        </div>
+        <div><h1 style="color: black;text-decoration: underline;text-align: center;">BOOKS</h1></div>
+        <br><br>
+    <div id="books" class="display_books"></div>
+    </section>
+
+
+    <script>
+            
+        
+        //runs automatically
+        (async function getAll() {
+            const books = document.querySelector("#books")
+            const response = await fetch("http://localhost:3000/api/getbooks")
+            const data = await response.json()
+            data.message.forEach((element) => {
+                console.log(element.author)
+                books.innerHTML += `<div class="books_margin">
+                    <p class="books"><b>Writter's Name</b>:${element.author}</p>
+                    
+                    <p class="books"><b>Book Tittle</b>:${element.tittle}</p>
+                    
+                    <p class="books"><b>Book Context</b>:${element.story}</p>
+                    </div>
+                  
+                    `
+            });
+        
+            console.log(data.message)
+
+        })()
+
+    </script>
+</body>
+</html>
