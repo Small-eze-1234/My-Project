@@ -1,6 +1,6 @@
 import express from "express"
 const router = express.Router();
-import { addReveiw } from "../controllers/addReviews";
+import { addReveiw } from "../controllers/addReviews.js";
 
 
 router.put("/review",addReveiw)

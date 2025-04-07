@@ -1,4 +1,4 @@
-import Reviews from "../model/reveiw";
+import Reviews from "../model/reveiw.js";
 
 export const addReveiw=async(req,res)=>{
     try{
