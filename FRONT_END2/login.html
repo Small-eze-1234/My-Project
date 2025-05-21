@@ -56,10 +56,16 @@
             const emailEL=document.querySelector("#email")
             const passwordEL=document.querySelector("#password")
             const buttonEL=document.querySelector("#button")
- 
+            // var value =prompt("enter your name")
+            // if(value.length<8){
+            //      alert("password is 8") 
+            // }
+            // if(value.includes("@")){
+            //     alert("password correct")
+            // }
  try {
      
- 
+           
             buttonEL.addEventListener("click",async()=>{
              //    e.preventDefault()
                 const reqBody={
@@ -69,9 +75,9 @@
                     password:passwordEL.value,
                     
                 }
-                
+
                 console.log(reqBody)
-                
+
                 
                 const response= await fetch("http://localhost:3000/api/login",{
                   method:"GET",
@@ -90,7 +96,7 @@
             })
          }
             catch (error) {
-             return
+             
  }
          //    const data=await response.JSON();
          //    if(data =Error){
